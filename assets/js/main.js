@@ -199,7 +199,7 @@ $(document).ready(function() {
     }
 
     showTestimonial(); // Show first testimonial
-    setInterval(showTestimonial, 4000); // Change every 4 seconds
+    setInterval(showTestimonial, 100000); // Change every 10 seconds
 });
 
 })(jQuery);
