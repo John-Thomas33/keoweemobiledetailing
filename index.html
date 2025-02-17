@@ -69,6 +69,9 @@
 										<li class="icon solid fa-star">Basic Clean + Full Wax/Ceramic - $150 - $250</li>
 										<li class="icon solid fa-hand-sparkles">Clay Bar Treatment - $60</li>
 										<li class="icon solid fa-chair">Leather Clean & Protect - $25</li>
+										<li class="icon solid fa-wind">Ozium Odor Treatment - $40</li>
+										<li class="icon solid fa-soap">Seat Shampoo - $25</li>
+
 									</ul>
 								</div>
 							</section>
