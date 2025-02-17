@@ -188,4 +188,18 @@
     });
 });
 
+$(document).ready(function() {
+    let testimonials = $(".testimonial");
+    let index = 0;
+
+    function showTestimonial() {
+        testimonials.hide();
+        $(testimonials[index]).fadeIn();
+        index = (index + 1) % testimonials.length;
+    }
+
+    showTestimonial(); // Show first testimonial
+    setInterval(showTestimonial, 4000); // Change every 4 seconds
+});
+
 })(jQuery);
