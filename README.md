@@ -65,13 +65,16 @@
 									<ul class="feature-icons">
 										<li class="icon solid fa-car">Basic Exterior Wash - $40</li>
 										<li class="icon solid fa-broom">Basic Interior Cleaning - $50</li>
-										<li class="icon solid fa-spray-can">Basic Clean Package (Exterior + Interior) - $80</li>
+										<li class="icon solid fa-spray-can">Basic Clean Package (Exterior + Interior)
+	  $80</li>
 										<li class="icon solid fa-star">Basic Clean + Full Wax/Ceramic - $150 - $250</li>
 										<li class="icon solid fa-hand-sparkles">Clay Bar Treatment - $60</li>
 										<li class="icon solid fa-chair">Leather Clean & Protect - $25</li>
 										<li class="icon solid fa-wind">Ozium Odor Treatment - $40</li>
 										<li class="icon solid fa-soap">Seat Shampoo - $25</li>
-
+	  
+										<li class="icon solid fa-lightbulb">Headlight Restoration - $50</li>
+	   									<li class="icon solid fa-tint">Stain Removal - $50</li>
 									</ul>
 								</div>
 							</section>
