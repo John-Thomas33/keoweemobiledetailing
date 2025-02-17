@@ -191,18 +191,24 @@
 $(document).ready(function() {
     let testimonials = $(".testimonial");
     let index = 0;
+    let isTransitioning = false; // Prevents multiple rapid switches
 
     function showTestimonial() {
-        testimonials.fadeOut(500, function() { // Fade out current testimonial
+        if (isTransitioning) return; // Stop if an animation is already running
+        isTransitioning = true;
+
+        testimonials.eq(index).fadeOut(500, function() {
             index = (index + 1) % testimonials.length; // Move to the next testimonial
-            $(testimonials[index]).fadeIn(500); // Fade in new testimonial
+            testimonials.eq(index).fadeIn(500, function() {
+                isTransitioning = false; // Reset flag after animation
+            });
         });
     }
 
-    testimonials.hide(); // Hide all testimonials initially
-    $(testimonials[0]).show(); // Show the first testimonial
+    testimonials.hide();
+    testimonials.eq(0).show(); // Show the first testimonial initially
 
-    setInterval(showTestimonial, 10000); // This should switch every 10 seconds
+    setInterval(showTestimonial, 10000); // Switch every 10 seconds
 });
 
 	
