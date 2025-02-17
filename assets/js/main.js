@@ -191,25 +191,30 @@
 $(document).ready(function() {
     let testimonials = $(".testimonial");
     let index = 0;
-    let isTransitioning = false; // Prevents multiple rapid switches
 
     function showTestimonial() {
-        if (isTransitioning) return; // Stop if an animation is already running
-        isTransitioning = true;
-
-        testimonials.eq(index).fadeOut(500, function() {
-            index = (index + 1) % testimonials.length; // Move to the next testimonial
-            testimonials.eq(index).fadeIn(500, function() {
-                isTransitioning = false; // Reset flag after animation
-            });
-        });
+        testimonials.hide();
+        $(testimonials[index]).fadeIn();
+        index = (index + 1) % testimonials.length;
     }
 
-    testimonials.hide();
-    testimonials.eq(0).show(); // Show the first testimonial initially
-
-    setInterval(showTestimonial, 10000); // Switch every 10 seconds
+    showTestimonial(); // Show first testimonial
+    setInterval(showTestimonial, 4000); // Change every 4 seconds
 });
 
+$(document).ready(function() {
+    let scrollableSection = $(".scrollable-details");
+
+    function autoScroll() {
+        let maxScroll = scrollableSection[0].scrollHeight - scrollableSection.height();
+        let currentScroll = scrollableSection.scrollTop();
+
+        if (currentScroll >= maxScroll) {
+            scrollableSection.animate({ scrollTop: 0 }, 1000); // Reset to top
+        } else {
+            scrollableSection.animate({ scrollTop: currentScroll + 200 }, 1000);
+        }
+    }
+});
 	
 })(jQuery);
