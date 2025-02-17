@@ -131,7 +131,7 @@
 									<p>Call us today for an appointment!</p>
 									<p><strong>Phone:</strong> 843-819-4151</p>
 									<p><strong>Service Areas:</strong> Clemson, Seneca, Pendleton, Six Mile</p>
-									<<form method="POST" action="[https://formspree.io/f/your-form-id (https://formspree.io/f/mqaegyrj)">>
+									<form method="POST" action="[https://formspree.io/f/your-form-id (https://formspree.io/f/mqaegyrj)">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
