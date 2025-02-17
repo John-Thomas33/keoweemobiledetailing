@@ -193,13 +193,17 @@ $(document).ready(function() {
     let index = 0;
 
     function showTestimonial() {
-        testimonials.hide(); // Hide all testimonials
-        $(testimonials[index]).fadeIn(); // Show one testimonial
-        index = (index + 1) % testimonials.length; // Loop through testimonials
+        testimonials.fadeOut(500, function() { // Fade out current testimonial
+            index = (index + 1) % testimonials.length; // Move to the next testimonial
+            $(testimonials[index]).fadeIn(500); // Fade in new testimonial
+        });
     }
 
-    showTestimonial(); // Show the first testimonial
-    setInterval(showTestimonial, 10000); // Change every 10 seconds
+    testimonials.hide(); // Hide all testimonials initially
+    $(testimonials[0]).show(); // Show the first testimonial
+
+    setInterval(showTestimonial, 10000); // This should switch every 10 seconds
 });
+
 	
 })(jQuery);
