@@ -155,5 +155,37 @@
 
 			}
 		});
+	
+	document.addEventListener("DOMContentLoaded", function() {
+    // Show the pop-up when the page loads
+    setTimeout(() => {
+        document.getElementById("discountModal").style.display = "flex";
+    }, 1000); // Delay pop-up by 1 second
+
+    // Close button functionality
+    document.querySelector(".close").addEventListener("click", function() {
+        document.getElementById("discountModal").style.display = "none";
+    });
+
+    // Handle form submission
+    document.getElementById("discountForm").addEventListener("submit", async function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        const formData = new FormData(this);
+        const response = await fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+            alert("Thank you! Your discount code will be sent to your email.");
+            document.getElementById("discountModal").style.display = "none";
+            this.reset();
+        } else {
+            alert("Oops! Something went wrong. Please try again.");
+        }
+    });
+});
 
 })(jQuery);
