@@ -500,12 +500,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		
-			<form id="discountForm" method="POST" action="https://formspree.io/f/mqaegyrj">
-   			<h2>Get 10% Off Your First Detail!</h2>
-    			<p>Enter your email below to claim your discount.</p>
-    			<input type="email" name="email" id="discountEmail" placeholder="Your Email" required />
-    			<button type="submit">Claim Discount</button>
-		</form>
+			<!-- Discount Pop-Up Modal -->
+			<div id="discountModal" class="modal">
+  			<div class="modal-content">
+        		<span class="close">&times;</span>
+       		 	<h2>Get 10% Off Your First Detail!</h2>
+        		<p>Enter your email below to claim your discount.</p>
+        		<form id="discountForm" method="POST" action="https://formspree.io/f/mqaegyrj">
+            		<input type="email" name="email" id="discountEmail" placeholder="Your Email" required />
+            		<button type="submit">Claim Discount</button>
+        </form>
+    </div>
+</div>
+
 
 	</body>
 </html>
