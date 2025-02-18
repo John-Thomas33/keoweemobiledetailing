@@ -3474,7 +3474,7 @@ input, select, textarea {
     position: absolute;
     top: 10px;  /* Moves the logo down slightly */
     left: 10px; /* Moves the logo right slightly */
-    height: 80px; /* Shrink the logo (adjust as needed) */
+    height: 15px; /* Shrink the logo (adjust as needed) */
     width: auto; /* Keep aspect ratio */
     z-index: 10; /* Ensure it appears on top */
 }
