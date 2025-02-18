@@ -3463,3 +3463,18 @@ input, select, textarea {
     object-fit: cover;
     border-radius: 5px;
 }
+
+/* Ensure the image container is positioned correctly */
+.image.main {
+    position: relative; /* Allows absolute positioning inside */
+}
+
+/* Position the logo on top of the lake image */
+.logo-overlay {
+    position: absolute;
+    top: 20px; /* Adjust for positioning */
+    left: 20px; /* Adjust for positioning */
+    height: 100px; /* Adjust size */
+    width: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Ensure it appears above the lake image */
+}
