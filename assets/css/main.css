@@ -3463,18 +3463,3 @@ input, select, textarea {
     object-fit: cover;
     border-radius: 5px;
 }
-
-/* Ensures the background image container is relative */
-.background-container {
-    position: relative;
-}
-
-/* Logo overlay positioning */
-.logo-overlay {
-    position: absolute;
-    top: 20px;  /* Adjust for spacing */
-    left: 20px; /* Adjust for positioning */
-    height: 80px; /* Adjust size */
-    width: auto; /* Keep aspect ratio */
-    z-index: 10; /* Ensures the logo stays on top */
-}
